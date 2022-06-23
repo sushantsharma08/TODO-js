@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: rgba(30, 30, 30, 0.908);
+    color: rgba(240, 248, 255, 0.596);
+    text-align: center;
+}
+header {
+    margin: 20px;
+}
+header h1{ 
+   text-align: end;
+   padding: 20px;
+}
+input{
+    width: auto;
+    height: 4vh;
+    border: none;
+    border-radius:100vmax;
+    margin: 10px;
+    padding-inline: 20px;
+    outline: none;
+    display: flex;
+    background-color: rgb(54, 54, 53);
+    color: rgb(97, 110, 131);
+}
+input:focus{
+    border: 1px solid rgba(79, 38, 79, 0.8);
+}
+#newTodo{
+    background-color: rgb(54, 54, 53);
+    color: rgb(136, 0, 255);
+}
+.Btn{
+    width: fit-content;
+    /* display:flex;
+    align-items: center;
+    justify-content: center; */
+    height: 4vh;
+    border: none;
+    border-radius:100vmax;
+    margin: 5px;
+    padding-inline: 15px;
+    background-color: rgba(41, 39, 44, 0.388);
+    border: 1px solid rgba(36, 28, 36, 0.334);
+    color: rgba(109, 69, 147, 0.884);
+}
+#taskList{
+    text-align: start;
+    margin: 30px;
+    padding: 12px;
+}
+.container{
+    margin-top: 20px;
+    border-top: 3px solid rgba(39, 36, 42, 0.238);
+    padding: 30px;
+}
