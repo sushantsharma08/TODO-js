@@ -19,6 +19,7 @@ header h1{
 }
 input{
     width: auto;
+    min-height: 20px;
     height: 4vh;
     border: none;
     border-radius:100vmax;
@@ -38,13 +39,11 @@ input:focus{
 }
 .Btn{
     width: fit-content;
-    /* display:flex;
-    align-items: center;
-    justify-content: center; */
+    min-height: 20px;
     height: 4vh;
     border: none;
     border-radius:100vmax;
-    margin: 5px;
+    margin: 10px;
     padding-inline: 15px;
     background-color: rgba(41, 39, 44, 0.388);
     border: 1px solid rgba(36, 28, 36, 0.334);
@@ -60,7 +59,20 @@ input:focus{
     border-top: 3px solid rgba(39, 36, 42, 0.238);
     padding-top:30px;
 }
-.task{
+
+.taskdiv {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.tasksDone{
+
+    display: flex;
+    justify-content: center;
+}
+@media (max-width:540px) {
+    .taskdiv{
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
 }
