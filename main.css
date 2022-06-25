@@ -48,6 +48,11 @@ input:focus{
     background-color: rgba(41, 39, 44, 0.388);
     border: 1px solid rgba(36, 28, 36, 0.334);
     color: rgba(109, 69, 147, 0.884);
+    
+}
+.Btn:hover{
+    cursor: pointer;
+    border: 1px solid rgb(79, 38, 79);
 }
 #taskList{
     text-align: start;

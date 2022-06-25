@@ -1,9 +1,11 @@
-const newTaskBTN = document.querySelector(".submitBtn");
-const container = document.querySelector(".task");
-const newTodoItem = document.getElementById("newTodo");
-const buttons_div = document.querySelector(".buttons");
-const tasksDone = document.querySelector(".TaskCount");
-let counter = 0;
+var newTaskBTN = document.querySelector(".submitBtn");
+var container = document.querySelector(".task");
+var newTodoItem = document.getElementById("newTodo");
+var buttons_div = document.querySelector(".buttons");
+var tasksDone = document.querySelector(".TaskCount");
+var saveBtn = document.querySelector(".save");
+var loadBtn = document.querySelector(".load");
+var counter = 0;
 
 newTaskBTN.addEventListener("click", function () {
     var div = document.createElement("div");
@@ -48,10 +50,12 @@ newTaskBTN.addEventListener("click", function () {
         if (editBTN.textContent === "Edit") {
             input.style.color = "rgb(193, 100, 202)";
             editBTN.textContent = "Save";
+            editBTN.style.backgroundColor="rgb(46, 33, 46)";
         } else {
             editBTN.textContent = "Edit";
             input.style.color = "rgb(97, 110, 131)";
             input.setAttribute("readonly", "");
+            editBTN.style.backgroundColor="rgba(41, 39, 44, 0.388)";
         }
     })
 
@@ -82,3 +86,14 @@ newTaskBTN.addEventListener("click", function () {
 
 }
 )
+
+saveBtn.addEventListener("click", function(){
+    var HTML = document.querySelector("html").innerHTML; //html of the page goes here
+localStorage.setItem("content", HTML);
+console.log("saved");
+})
+
+loadBtn.addEventListener("click", function(){
+    document.write(localStorage['content']);
+    console.log("loaded");
+})
