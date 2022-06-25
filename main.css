@@ -71,13 +71,21 @@ input:focus{
     justify-content: center;
 }
 .tasksDone{
-
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    color: rgb(134, 148, 255);
 }
 @media (max-width:540px) {
     .taskdiv{
         flex-direction: column;
         flex-direction: column-reverse;
+    }
+    /* .tasksDone{
+        justify-content: flex-end;
+    } */
+}
+@media(min-width:540px){
+    .tasksDone{
+       margin-right: 14rem;
     }
 }
